@@ -152,13 +152,16 @@ Splunk Infrastructure Monitoring
 
 The following Infrastructure Monitoring metadata keys are required to enable Related Content:
 
-- ``host.name``
-- ``k8s.cluster.name``
-- ``k8s.node.name``
-- ``k8s.pod.name``
-- ``container.id``
-- ``k8s.namespace.name``
-- ``kubernetes.workload.name``
+- ``host.name`` - if using OpenTelemetry and linking to Logs
+- ``aws_private_dns_name`` - if using the AWS CloudWatch integration and linking to Logs
+- ``azure_resource_name`` - if using the Azure integration and linking to Logs
+- ``instance_name`` - if using the GCP integration and linking to Logs
+- ``k8s.cluster.name`` - if using OpenTelemetry and linking to and from Logs or APM
+- ``k8s.node.name`` - if using OpenTelemetry and linking to and from Logs or APM
+- ``k8s.pod.name`` - if using OpenTelemetry and linking to and from Logs or APM
+- ``container.id`` - if using OpenTelemetry and linking to and from Logs or APM
+- ``k8s.namespace.name`` - if using OpenTelemetry and linking to and from Logs or APM
+- ``kubernetes.workload.name`` - if using OpenTelemetry and linking to and from Logs or APM
 
 If you're using the default configuration of the Splunk Distribution of the OpenTelemetry Collector for Kubernetes, the required Infrastructure Monitoring metadata is provided. See more at :ref:`otel-install-k8s`.
 
